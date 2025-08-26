@@ -1,0 +1,16 @@
+---
+const { img = '/assets/benefits-split.webp', title = 'Beneficios de trabajar con nosotros', text = 'Optimiza tu logística con un equipo dedicado a entregas rápidas y confiables.', reverse = false } = Astro.props;
+const whatsapp = 'https://wa.me/5491166666666?text=Hola%20Tori%20Log%C3%ADstica%2C%20quiero%20conocer%20los%20beneficios';
+---
+<section class="py-16">
+  <div class={`mx-auto max-w-7xl flex flex-col items-center gap-8 px-4 md:gap-12 md:flex-row ${reverse ? 'md:flex-row-reverse' : ''}`}>
+    <div class="md:w-1/2">
+      <img src={img} alt="" class="w-full rounded-2xl shadow" />
+    </div>
+    <div class="md:w-1/2">
+      <h3 class="mb-4 text-3xl font-bold text-gray-900">{title}</h3>
+      <p class="mb-6 text-gray-700">{text}</p>
+      <a href={whatsapp} class="rounded-full bg-brand px-6 py-3 font-semibold text-white hover:brightness-110">WhatsApp</a>
+    </div>
+  </div>
+</section>
