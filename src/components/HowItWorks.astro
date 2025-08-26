@@ -1,24 +1,19 @@
 ---
+const steps = [
+  { img: '/assets/step-1.webp', title: 'Coordinás', text: 'Nos escribís y coordinamos el retiro.' },
+  { img: '/assets/step-2.webp', title: 'Retiramos', text: 'Buscamos tu paquete cuando lo necesites.' },
+  { img: '/assets/step-3.webp', title: 'Entregamos', text: 'Lo llevamos rápido a tu comprador.' },
+];
 ---
-<section class="bg-gray-50 py-16">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-semibold text-center mb-10">¿Cómo funciona?</h2>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="text-center space-y-4 p-6 bg-white shadow-md rounded-xl">
-        <div class="mx-auto w-16 h-16 flex items-center justify-center bg-emerald-500 text-white rounded-full text-2xl">1</div>
-        <h3 class="font-bold text-xl">Regístrate</h3>
-        <p class="text-gray-600">Crea tu cuenta en solo minutos.</p>
+<section id="menu1" class="py-16">
+  <h2 class="mb-12 text-center text-3xl font-bold text-gray-900">Cómo funciona nuestro servicio</h2>
+  <div class="mx-auto max-w-7xl grid grid-cols-1 gap-8 px-4 sm:grid-cols-2 lg:grid-cols-3">
+    {steps.map(step => (
+      <div class="rounded-2xl bg-white p-6 text-center shadow">
+        <img src={step.img} alt="" class="mx-auto mb-4 h-24 w-24" />
+        <h3 class="mb-2 text-xl font-semibold text-gray-900">{step.title}</h3>
+        <p class="text-gray-700">{step.text}</p>
       </div>
-      <div class="text-center space-y-4 p-6 bg-white shadow-md rounded-xl">
-        <div class="mx-auto w-16 h-16 flex items-center justify-center bg-emerald-500 text-white rounded-full text-2xl">2</div>
-        <h3 class="font-bold text-xl">Configura</h3>
-        <p class="text-gray-600">Personaliza la experiencia a tu medida.</p>
-      </div>
-      <div class="text-center space-y-4 p-6 bg-white shadow-md rounded-xl">
-        <div class="mx-auto w-16 h-16 flex items-center justify-center bg-emerald-500 text-white rounded-full text-2xl">3</div>
-        <h3 class="font-bold text-xl">Disfruta</h3>
-        <p class="text-gray-600">Aprovecha todas las ventajas que ofrecemos.</p>
-      </div>
-    </div>
+    ))}
   </div>
 </section>

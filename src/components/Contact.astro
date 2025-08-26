@@ -1,24 +1,30 @@
 ---
+const whatsapp = 'https://wa.me/5491166666666?text=Hola%20Tori%20Log%C3%ADstica%2C%20quiero%20hacer%20una%20consulta';
 ---
 <section class="py-16">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-semibold text-center mb-10">Contáctanos</h2>
-      <div class="grid md:grid-cols-2 gap-8">
-        <form class="space-y-4">
-          <input type="text" placeholder="Nombre" class="w-full border p-3 rounded mb-4" />
-          <input type="email" placeholder="Email" class="w-full border p-3 rounded mb-4" />
-          <textarea placeholder="Mensaje" class="w-full border p-3 rounded mb-4" rows="4"></textarea>
-          <button type="submit" class="px-6 py-2 bg-emerald-600 text-white rounded hover:bg-emerald-700">Enviar</button>
-        </form>
-        <div class="space-y-4 text-center md:text-left">
-          <p><strong>Teléfono:</strong> +1 234 567 890</p>
-          <p><strong>Email:</strong> contacto@example.com</p>
-        <div class="flex justify-center md:justify-start space-x-4 text-emerald-500 text-2xl">
-          <a href="#">🐦</a>
-          <a href="#">📘</a>
-          <a href="#">📸</a>
-        </div>
+  <div class="mx-auto max-w-7xl px-4">
+    <h2 class="text-center text-3xl font-bold text-gray-900">Contacto</h2>
+    <p class="mt-2 mb-12 text-center text-gray-700">Estamos para ayudarte.</p>
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+      <div class="space-y-4">
+        <p><strong>Teléfono/WhatsApp:</strong> <a href={whatsapp} class="text-brand hover:underline">+54 9 11 6666-6666</a></p>
+        <p><strong>Email:</strong> <a href="mailto:info@tori-logistica.com" class="hover:underline">info@tori-logistica.com</a></p>
+        <p><strong>Dirección:</strong> CABA, Argentina</p>
+        <p><strong>Horarios:</strong> Lunes a Viernes 9-18h</p>
+        <p class="flex space-x-4">
+          <a href="https://instagram.com" class="text-brand hover:underline">Instagram</a>
+          <a href={whatsapp} class="text-brand hover:underline">WhatsApp</a>
+        </p>
       </div>
+      <form class="space-y-4">
+        <input type="text" placeholder="Nombre" class="w-full rounded-md border px-4 py-2" />
+        <input type="email" placeholder="Email" class="w-full rounded-md border px-4 py-2" />
+        <textarea placeholder="Mensaje" class="w-full rounded-md border px-4 py-2"></textarea>
+        <button type="submit" class="rounded-full bg-brand px-6 py-3 font-semibold text-white hover:brightness-110">Enviar</button>
+      </form>
+    </div>
+    <div class="mt-12 text-center">
+      <a href={whatsapp} class="rounded-full bg-brand px-8 py-4 font-semibold text-white hover:brightness-110">Escribinos por WhatsApp</a>
     </div>
   </div>
 </section>

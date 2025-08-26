@@ -1,0 +1,23 @@
+---
+const whatsapp = 'https://wa.me/5491166666666?text=Hola%20Tori%20Log%C3%ADstica%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n';
+---
+<header class="sticky top-0 z-50 bg-white/70 backdrop-blur">
+  <div class="mx-auto max-w-7xl px-4 py-3">
+    <div class="grid grid-cols-2 md:grid-cols-3 items-center">
+      <div>
+        <a href="/">
+          <img src="/assets/logo-tori.svg" alt="Tori Logística" class="h-8" />
+        </a>
+      </div>
+      <nav class="hidden lg:flex justify-center space-x-8">
+        <a href="#menu1" class="text-gray-700 hover:text-brand">Menú 1</a>
+        <a href="#menu2" class="text-gray-700 hover:text-brand">Menú 2</a>
+        <a href="#menu3" class="text-gray-700 hover:text-brand">Menú 3</a>
+      </nav>
+      <div class="flex justify-end space-x-3">
+        <a href={whatsapp} class="rounded-full bg-brand px-4 py-2 font-semibold text-white hover:brightness-110">WhatsApp</a>
+        <a href="#" class="hidden md:inline-block rounded-full border border-brand px-4 py-2 font-semibold text-brand hover:bg-brand hover:text-white">Secundario</a>
+      </div>
+    </div>
+  </div>
+</header>

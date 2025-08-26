@@ -1,39 +1,25 @@
 ---
+const whatsappBase = 'https://wa.me/5491166666666';
+const plans = [
+  { title: 'Básico', text: 'Para envíos ocasionales.', price: '', msg: 'Hola, quiero consultar por el plan Básico.' },
+  { title: 'Standard', text: 'La opción más popular.', price: '', msg: 'Hola, quiero consultar por el plan Standard.', featured: true },
+  { title: 'Premium', text: 'Para grandes volúmenes.', price: '', msg: 'Hola, quiero consultar por el plan Premium.' },
+];
 ---
-  <section class="bg-gray-50 py-16">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-10">Tarifas</h2>
-    <div class="grid md:grid-cols-3 gap-8">
-        <div class="p-6 space-y-4 bg-white rounded-xl shadow">
-        <h3 class="text-xl font-bold">Básico</h3>
-        <p class="text-4xl font-bold text-emerald-500">$10</p>
-        <ul class="space-y-2 text-gray-600">
-          <li>Característica 1</li>
-          <li>Característica 2</li>
-          <li>Característica 3</li>
-        </ul>
-        <button class="w-full py-2 bg-emerald-500 text-white rounded hover:bg-emerald-600">Elegir</button>
-      </div>
-        <div class="p-6 space-y-4 bg-emerald-500 text-white rounded-xl shadow">
-        <h3 class="text-xl font-bold">Profesional</h3>
-          <p class="text-4xl font-bold text-white">$20</p>
-          <ul class="space-y-2 text-white/90">
-          <li>Todo en Básico</li>
-          <li>Característica 4</li>
-          <li>Característica 5</li>
-        </ul>
-        <button class="w-full py-2 bg-emerald-500 text-white rounded hover:bg-emerald-600">Elegir</button>
-      </div>
-        <div class="p-6 space-y-4 bg-white rounded-xl shadow">
-        <h3 class="text-xl font-bold">Empresarial</h3>
-        <p class="text-4xl font-bold text-emerald-500">$30</p>
-        <ul class="space-y-2 text-gray-600">
-          <li>Todo en Profesional</li>
-          <li>Característica 6</li>
-          <li>Soporte dedicado</li>
-        </ul>
-        <button class="w-full py-2 bg-emerald-500 text-white rounded hover:bg-emerald-600">Elegir</button>
-      </div>
+<section id="menu3" class="py-16">
+  <div class="mx-auto max-w-7xl px-4">
+    <h2 class="text-center text-3xl font-bold text-gray-900">Tarifas</h2>
+    <p class="mt-2 mb-12 text-center text-gray-700">Elige el plan que mejor se adapte a tus necesidades.</p>
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {plans.map(plan => (
+        <div class={`flex flex-col rounded-2xl border p-6 text-center shadow-sm ${plan.featured ? 'border-brand shadow-lg' : ''}`}>
+          <img src={`/assets/pricing-${plans.indexOf(plan)+1}.webp`} alt="" class="mx-auto mb-4 h-24 w-24" />
+          <h3 class="mb-2 text-xl font-semibold text-gray-900">{plan.title}</h3>
+          <p class="mb-4 text-gray-700">{plan.text}</p>
+          {plan.price && <p class="mb-4 text-2xl font-bold text-gray-900">{plan.price}</p>}
+          <a href={`${whatsappBase}?text=${encodeURIComponent(plan.msg)}`} class="mt-auto rounded-full bg-brand px-6 py-3 font-semibold text-white hover:brightness-110">Consultar</a>
+        </div>
+      ))}
     </div>
   </div>
 </section>
